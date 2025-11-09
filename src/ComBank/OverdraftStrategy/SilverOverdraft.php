@@ -12,6 +12,12 @@
  * */
 class SilverOverdraft 
 {
-
-    
+    public function isGrantOverDraftFunds(float $newAmount): bool
+    {
+        return ($this->getOverDraftFundsAmount() + $newAmount) >= 0;
+    }
+    public function getOverDraftFundsAmount(): float
+    {
+        return 100.00;
+    } 
 }
